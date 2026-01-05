@@ -18,23 +18,48 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
     const feedUrl =
       'https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18'
 
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
     const response = await fetch(feedUrl, {
       next: { revalidate: 3600 }, // Revalidate every hour
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; RSS Feed Reader)',
+        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+      },
+      signal: controller.signal,
+    }).finally(() => {
+      clearTimeout(timeoutId)
     })
 
     if (!response.ok) {
-      throw new Error('Failed to fetch RSS feed')
+      console.error(`RSS feed fetch failed with status: ${response.status} ${response.statusText}`)
+      throw new Error(`Failed to fetch RSS feed: ${response.status} ${response.statusText}`)
     }
 
     const xmlText = await response.text()
+    
+    // Check if we got valid XML
+    if (!xmlText || xmlText.trim().length === 0) {
+      console.error('RSS feed returned empty content')
+      throw new Error('RSS feed returned empty content')
+    }
+    
+    // Check if it looks like XML/RSS
+    if (!xmlText.includes('<rss') && !xmlText.includes('<feed')) {
+      console.error('RSS feed does not appear to be valid XML')
+      throw new Error('RSS feed does not appear to be valid XML')
+    }
 
     // Parse RSS XML
     const items: any[] = []
     const itemRegex = /<item>([\s\S]*?)<\/item>/g
     let match
     let index = 0
+    let itemCount = 0
 
     while ((match = itemRegex.exec(xmlText)) !== null && items.length < 12) {
+      itemCount++
       const itemContent = match[1]
 
       const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/)
@@ -125,9 +150,22 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       }
     }
 
+    if (items.length === 0 && itemCount === 0) {
+      console.warn('No RSS items found in feed. XML length:', xmlText.length)
+      console.warn('First 500 chars of XML:', xmlText.substring(0, 500))
+    } else if (items.length === 0 && itemCount > 0) {
+      console.warn(`Found ${itemCount} items but none passed validation`)
+    } else {
+      console.log(`Successfully parsed ${items.length} RSS items`)
+    }
+
     return items
   } catch (error) {
     console.error('Error fetching RSS feed:', error)
+    if (error instanceof Error) {
+      console.error('Error message:', error.message)
+      console.error('Error stack:', error.stack)
+    }
     return []
   }
 }

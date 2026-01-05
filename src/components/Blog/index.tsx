@@ -27,7 +27,19 @@ const Blog = async () => {
           </div>
         ) : (
           <div className="text-center text-body-color dark:text-body-color-dark">
-            <p>Loading market insights...</p>
+            <p className="mb-2">Unable to load market insights at this time.</p>
+            <p className="text-sm">
+              Visit{" "}
+              <a
+                href="https://www.simplifyingthemarket.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Simplifying the Market
+              </a>{" "}
+              for the latest real estate news.
+            </p>
           </div>
         )}
       </div>

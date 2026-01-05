@@ -13,12 +13,16 @@ import PropertySearchWidget from "@/components/Homepage/PropertySearchWidget";
 import FeaturedCommunities from "@/components/Homepage/FeaturedCommunities";
 import FAQSection from "@/components/Homepage/FAQSection";
 import CTASection from "@/components/Homepage/CTASection";
+import OrganizationSchema from "@/components/SEO/OrganizationSchema";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
   description:
     "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
+  alternates: {
+    canonical: "https://www.arieshenderson.com",
+  },
   openGraph: {
     title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
     description:
@@ -48,6 +52,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <OrganizationSchema />
       <ScrollUp />
       {/* 1. Hero Section with Value Proposition */}
       <HeroSection />

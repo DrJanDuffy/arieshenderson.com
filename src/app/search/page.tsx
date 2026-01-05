@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Property Search | Find Your Dream Home",
   description:
     "Search for homes for sale in Las Vegas. Use our advanced search to filter by price, location, property type, and more. Find your perfect home today.",
+  alternates: {
+    canonical: "https://www.arieshenderson.com/search",
+  },
 };
 
 export default function SearchPage() {
@@ -14,6 +17,7 @@ export default function SearchPage() {
       <Breadcrumb
         pageName="Property Search"
         description="Use our advanced search tool to find your perfect home. Filter by location, price, property type, and more."
+        path="search"
       />
 
       <section className="py-16 md:py-20 lg:py-28">

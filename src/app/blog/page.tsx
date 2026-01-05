@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Real Estate Market Insights & News | Las Vegas Real Estate Blog",
   description:
     "Stay informed with the latest Las Vegas real estate market news, buying tips, market trends, and insights from Simplifying the Market to help you make informed homebuying decisions.",
+  alternates: {
+    canonical: "https://www.arieshenderson.com/blog",
+  },
 };
 
 const Blog = async () => {
@@ -17,6 +20,7 @@ const Blog = async () => {
       <Breadcrumb
         pageName="Market Insights"
         description="Stay informed with the latest real estate market news, buying tips, and market trends to help you make informed decisions."
+        path="blog"
       />
 
       <section className="pt-[120px] pb-[120px]">

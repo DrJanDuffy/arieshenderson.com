@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Summerlin, NV New Construction Homes | Master-Planned Community",
   description:
     "Explore new construction homes in Summerlin, Las Vegas. Master-planned community with top-rated schools, parks, and shopping. Price range $500K - $1.5M.",
+  alternates: {
+    canonical: "https://www.arieshenderson.com/neighborhoods/summerlin",
+  },
 };
 
 export default function SummerlinNeighborhoodPage() {
@@ -15,6 +18,7 @@ export default function SummerlinNeighborhoodPage() {
       <Breadcrumb
         pageName="Summerlin Neighborhood"
         description="Master-planned community with top-rated schools, parks, and shopping."
+        path="neighborhoods/summerlin"
       />
 
       <section className="pt-[120px] pb-[120px]">

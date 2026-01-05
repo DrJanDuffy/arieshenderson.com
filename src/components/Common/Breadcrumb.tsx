@@ -1,14 +1,26 @@
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/SEO/BreadcrumbSchema";
 
 const Breadcrumb = ({
   pageName,
   description,
+  path,
 }: {
   pageName: string;
   description: string;
+  path?: string;
 }) => {
+  const baseUrl = "https://www.arieshenderson.com";
+  const currentPath = path || "";
+  
+  const breadcrumbItems = [
+    { name: "Home", url: baseUrl },
+    ...(currentPath ? [{ name: pageName, url: `${baseUrl}/${currentPath}` }] : []),
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">

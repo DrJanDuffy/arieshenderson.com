@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import SectionTitle from '../Common/SectionTitle'
+import FAQSchema from '../SEO/FAQSchema'
 
 const faqs = [
   {
@@ -41,6 +42,7 @@ export default function FAQSection() {
 
   return (
     <section className="dark:bg-bg-color-dark bg-white relative z-10 py-16 md:py-20 lg:py-28">
+      <FAQSchema faqs={faqs} />
       <div className="container">
         <SectionTitle
           title="Common Questions"

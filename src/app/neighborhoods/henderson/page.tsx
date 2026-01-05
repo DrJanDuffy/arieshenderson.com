@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Henderson, NV New Construction Homes | Neighborhood Guide",
   description:
     "Explore new construction homes in Henderson, Nevada. Family-friendly community with excellent schools, parks, and amenities. Price range $400K - $900K.",
+  alternates: {
+    canonical: "https://www.arieshenderson.com/neighborhoods/henderson",
+  },
 };
 
 export default function HendersonNeighborhoodPage() {
@@ -15,6 +18,7 @@ export default function HendersonNeighborhoodPage() {
       <Breadcrumb
         pageName="Henderson Neighborhood"
         description="Family-friendly area with excellent schools and community amenities."
+        path="neighborhoods/henderson"
       />
 
       <section className="pt-[120px] pb-[120px]">

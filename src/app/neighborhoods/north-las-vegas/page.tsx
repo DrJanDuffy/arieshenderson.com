@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "North Las Vegas, NV New Construction Homes | Affordable Housing",
   description:
     "Explore new construction homes in North Las Vegas, Nevada. Growing area with affordable housing options and new construction communities. Price range $350K - $700K.",
+  alternates: {
+    canonical: "https://www.arieshenderson.com/neighborhoods/north-las-vegas",
+  },
 };
 
 export default function NorthLasVegasNeighborhoodPage() {
@@ -15,6 +18,7 @@ export default function NorthLasVegasNeighborhoodPage() {
       <Breadcrumb
         pageName="North Las Vegas Neighborhood"
         description="Growing area with new construction and affordable housing options."
+        path="neighborhoods/north-las-vegas"
       />
 
       <section className="pt-[120px] pb-[120px]">

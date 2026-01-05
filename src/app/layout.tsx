@@ -25,6 +25,18 @@ export default function RootLayout({
           type="module"
           async
         />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            realscout-advanced-search {
+              --rs-as-button-text-color: #ffffff;
+              --rs-as-background-color: #ffffff;
+              --rs-as-button-color: #4a90e2;
+              --rs-as-widget-width: 500px !important;
+            }
+          `,
+          }}
+        />
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>

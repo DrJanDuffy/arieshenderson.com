@@ -1,5 +1,6 @@
 import SectionTitle from '../Common/SectionTitle'
 import OfficeListings from '../RealScout/OfficeListings'
+import AdvancedSearch from '../RealScout/AdvancedSearch'
 
 export default function PropertySearchWidget() {
   return (
@@ -10,11 +11,18 @@ export default function PropertySearchWidget() {
       <div className="container">
         <SectionTitle
           title="Search Available Properties"
-          paragraph="Browse our current listings of homes for sale. Filter by price, location, and property type to find your perfect home."
+          paragraph="Use our advanced search to find your perfect home. Filter by price, location, property type, and more."
           center
         />
 
+        <div className="mx-auto mb-12 max-w-2xl">
+          <AdvancedSearch agentEncodedId="QWdlbnQtMjI1MDUw" />
+        </div>
+
         <div className="mx-auto max-w-6xl">
+          <h3 className="mb-6 text-center text-2xl font-bold text-black dark:text-white">
+            Current Listings
+          </h3>
           <OfficeListings
             agentEncodedId="QWdlbnQtMjI1MDUw"
             sortOrder="NEWEST"

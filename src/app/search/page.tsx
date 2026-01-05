@@ -18,7 +18,7 @@ export default function SearchPage() {
 
       <section className="py-16 md:py-20 lg:py-28">
         <div className="container">
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
             <div className="mb-8 text-center">
               <h1 className="mb-4 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-5xl">
                 Find Your Dream Home
@@ -30,7 +30,9 @@ export default function SearchPage() {
             </div>
 
             <div className="mb-12 flex justify-center">
-              <AdvancedSearch agentEncodedId="QWdlbnQtMjI1MDUw" />
+              <div className="w-full max-w-4xl">
+                <AdvancedSearch agentEncodedId="QWdlbnQtMjI1MDUw" />
+              </div>
             </div>
 
             <div className="rounded-lg border border-gray-200 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800">

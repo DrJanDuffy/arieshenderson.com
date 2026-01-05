@@ -32,7 +32,7 @@ export default function RootLayout({
               --rs-as-button-text-color: #ffffff;
               --rs-as-background-color: #ffffff;
               --rs-as-button-color: #4a90e2;
-              --rs-as-widget-width: 500px !important;
+              --rs-as-widget-width: 100% !important;
             }
           `,
           }}

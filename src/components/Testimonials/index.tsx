@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Sarah & Mike",
+    designation: "Summerlin Homebuyers",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "We were about to pay full price for a new build in Summerlin. Our agent negotiated $25,000 off the base price and got us $15,000 in free upgrades. The builder's agent never would have done that—they work for the builder.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
+    name: "Jennifer",
+    designation: "First-Time Homebuyer",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "The contract had all these clauses that would have left us with no recourse if things went wrong. Our agent caught them, explained what they meant, and got the builder to remove the worst ones. We would have signed anything without her.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
+    name: "David & Lisa",
+    designation: "Henderson New Construction",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Builder kept pushing back our closing date. Our agent didn't just accept it—she negotiated compensation for our extended rent and got them to commit to a firm date. We would have been stuck without her.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -37,8 +37,8 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Real Results From Real Homebuyers"
+          paragraph="People who worked with us instead of going it alone with the builder's agent:"
           center
         />
 

@@ -19,7 +19,13 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+      <head>
+        <script
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
+          async
+        />
+      </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>

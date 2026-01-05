@@ -1,36 +1,71 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import Blog from "@/components/Blog";
+import HeroSection from "@/components/Homepage/HeroSection";
+import ProblemSection from "@/components/Homepage/ProblemSection";
+import DifferentiatorSection from "@/components/Homepage/DifferentiatorSection";
+import ValuePropsSection from "@/components/Homepage/ValuePropsSection";
+import CredentialsSection from "@/components/Homepage/CredentialsSection";
+import ProcessSection from "@/components/Homepage/ProcessSection";
+import TwoPathNavigation from "@/components/Homepage/TwoPathNavigation";
+import PricingSection from "@/components/Homepage/PricingSection";
+import PropertySearchWidget from "@/components/Homepage/PropertySearchWidget";
+import FeaturedCommunities from "@/components/Homepage/FeaturedCommunities";
+import FAQSection from "@/components/Homepage/FAQSection";
+import CTASection from "@/components/Homepage/CTASection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+  title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
+  description:
+    "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
 };
 
 export default function Home() {
   return (
     <>
       <ScrollUp />
-      <Hero />
-      <Features />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* 1. Hero Section with Value Proposition */}
+      <HeroSection />
+      
+      {/* 2. Problem Section */}
+      <ProblemSection />
+      
+      {/* 3. Differentiator Statement */}
+      <DifferentiatorSection />
+      
+      {/* 4. Value Props */}
+      <ValuePropsSection />
+      
+      {/* 5. Credentials/Certifications Visual */}
+      <CredentialsSection />
+      
+      {/* 6. Process */}
+      <ProcessSection />
+      
+      {/* 7. Two-Path Navigation */}
+      <TwoPathNavigation />
+      
+      {/* 8. Pricing/Packages */}
+      <PricingSection />
+      
+      {/* 9. Trust Signals: Testimonials */}
       <Testimonials />
-      <Pricing />
+      
+      {/* 10. Property Search Widget */}
+      <PropertySearchWidget />
+      
+      {/* 11. Featured Communities */}
+      <FeaturedCommunities />
+      
+      {/* 12. FAQ */}
+      <FAQSection />
+      
+      {/* 13. Final CTA */}
+      <CTASection />
+      
+      {/* 14. Blog/News Feed */}
       <Blog />
-      <Contact />
     </>
   );
 }

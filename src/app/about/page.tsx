@@ -7,7 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Dr. Jan Duffy | Exclusive Buyer Agent | Las Vegas Real Estate",
   description:
-    "Learn about Dr. Jan Duffy, your trusted Las Vegas real estate expert specializing in exclusive buyer representation and new construction homes. 60+ professional certifications.",
+    "Learn about Dr. Jan Duffy, your trusted Las Vegas real estate expert specializing in exclusive buyer representation and new construction homes.",
 };
 
 const AboutPage = () => {

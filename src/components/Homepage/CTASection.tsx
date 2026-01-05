@@ -27,7 +27,7 @@ export default function CTASection() {
             </Link>
           </div>
           <p className="mt-8 text-sm text-body-color dark:text-body-color-dark">
-            60+ professional certifications. Exclusive buyer representation. No dual
+            Professional certifications. Exclusive buyer representation. No dual
             agency. No conflicts of interest.
           </p>
         </div>

@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Exclusive Buyer Representation You Can Trust"
-                paragraph="Dr. Jan Duffy brings decades of real estate expertise and 60+ professional certifications to serve Las Vegas homebuyers. As an exclusive buyer agent, we work solely for you—not the builder—ensuring you get the best deal, contract protection, and representation throughout your new construction purchase."
+                paragraph="Dr. Jan Duffy brings decades of real estate expertise to serve Las Vegas homebuyers. As an exclusive buyer agent, we work solely for you—not the builder—ensuring you get the best deal, contract protection, and representation throughout your new construction purchase."
                 mb="44px"
               />
 
@@ -35,9 +35,9 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="60+ Professional Certifications" />
                     <List text="Exclusive Buyer Representation" />
                     <List text="New Construction Specialist" />
+                    <List text="Professional Certifications" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">

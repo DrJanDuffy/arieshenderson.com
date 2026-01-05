@@ -10,7 +10,6 @@ const certifications: Certification[] = [
   { name: 'CSP (Certified New Home Specialist)' },
   { name: 'GRI (Graduate Realtor Institute)' },
   { name: 'SRS (Seller Representative Specialist)' },
-  { name: '60+ Professional Certifications' },
 ]
 
 export default function CredentialsSection() {
@@ -19,7 +18,7 @@ export default function CredentialsSection() {
       <div className="container">
         <SectionTitle
           title="Specialized Training & Credentials"
-          paragraph="Our team holds 60+ professional certifications and specialized training in new construction, buyer representation, and real estate negotiation."
+          paragraph="Our team holds professional certifications and specialized training in new construction, buyer representation, and real estate negotiation."
           center
         />
 

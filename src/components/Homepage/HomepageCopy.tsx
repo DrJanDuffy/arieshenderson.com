@@ -94,8 +94,8 @@ export const homepageCopy = {
     ],
     stats: [
       {
-        number: "60+",
-        label: "Professional Certifications",
+        number: "Professional",
+        label: "Certifications",
         description: "Specialized training in buyer representation and new construction",
       },
       {
@@ -227,6 +227,6 @@ export const homepageCopy = {
     primaryCTA: "Schedule Free Consultation",
     secondaryCTA: "See Current Listings",
     trustNote:
-      "60+ professional certifications. Exclusive buyer representation. No dual agency. No conflicts of interest.",
+      "Professional certifications. Exclusive buyer representation. No dual agency. No conflicts of interest.",
   },
 }

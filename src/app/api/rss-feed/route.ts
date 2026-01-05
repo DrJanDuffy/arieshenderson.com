@@ -29,7 +29,7 @@ export async function GET() {
     const itemRegex = /<item>([\s\S]*?)<\/item>/g
     let match
 
-    while ((match = itemRegex.exec(xmlText)) !== null && items.length < 6) {
+    while ((match = itemRegex.exec(xmlText)) !== null && items.length < 12) {
       const itemContent = match[1]
 
       const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/)

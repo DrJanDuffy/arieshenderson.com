@@ -34,7 +34,7 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
     let match
     let index = 0
 
-    while ((match = itemRegex.exec(xmlText)) !== null && items.length < 6) {
+    while ((match = itemRegex.exec(xmlText)) !== null && items.length < 12) {
       const itemContent = match[1]
 
       const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/)

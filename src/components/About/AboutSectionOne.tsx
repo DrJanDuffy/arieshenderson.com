@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Exclusive Buyer Representation You Can Trust"
+                paragraph="Dr. Jan Duffy brings decades of real estate expertise and 60+ professional certifications to serve Las Vegas homebuyers. As an exclusive buyer agent, we work solely for you—not the builder—ensuring you get the best deal, contract protection, and representation throughout your new construction purchase."
                 mb="44px"
               />
 
@@ -35,15 +35,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="60+ Professional Certifications" />
+                    <List text="Exclusive Buyer Representation" />
+                    <List text="New Construction Specialist" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Contract Negotiation Expert" />
+                    <List text="Las Vegas Market Knowledge" />
+                    <List text="No Dual Agency Conflicts" />
                   </div>
                 </div>
               </div>

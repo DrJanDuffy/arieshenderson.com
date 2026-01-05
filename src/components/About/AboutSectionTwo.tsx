@@ -28,29 +28,26 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  Why Exclusive Buyer Representation Matters
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  When you work with a builder&apos;s agent, they represent the builder—not you. As an exclusive buyer agent, we work solely for you. This means aggressive price negotiation, contract protection, and someone who fights for your interests, not the builder&apos;s bottom line.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  Specialized New Construction Expertise
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  New construction comes with unique challenges—builder contracts, upgrade negotiations, timeline management, and warranty issues. We understand these complexities and help you navigate them successfully, saving you thousands while protecting your investment.
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                  Your Las Vegas Real Estate Partner
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                  With deep knowledge of Las Vegas neighborhoods, builder reputations, and market trends, we help you make informed decisions. From Summerlin to Henderson, we know which communities offer the best value and which builders deliver quality homes.
                 </p>
               </div>
             </div>

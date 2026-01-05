@@ -58,14 +58,14 @@ const Header = () => {
               >
                 <Image
                   src="/images/logo/logo-2.svg"
-                  alt="logo"
+                  alt="GetReal Buyer Agents - Exclusive Buyer Representation"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
                   src="/images/logo/logo.svg"
-                  alt="logo"
+                  alt="GetReal Buyer Agents - Exclusive Buyer Representation"
                   width={140}
                   height={30}
                   className="hidden w-full dark:block"

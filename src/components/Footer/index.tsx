@@ -13,14 +13,14 @@ const Footer = () => {
                 <Link href="/" className="mb-8 inline-block">
                   <Image
                     src="/images/logo/logo-2.svg"
-                    alt="logo"
+                    alt="GetReal Buyer Agents - Exclusive Buyer Representation"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
                   <Image
                     src="/images/logo/logo.svg"
-                    alt="logo"
+                    alt="GetReal Buyer Agents - Exclusive Buyer Representation"
                     className="hidden w-full dark:block"
                     width={140}
                     height={30}

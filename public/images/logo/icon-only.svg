@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="logo-icon">
+  <defs>
+    <style>
+      .logo-icon .icon-shield { fill: #0D7377; }
+      .logo-icon .icon-check { stroke: #FFFFFF; stroke-width: 2.5; }
+    </style>
+  </defs>
+  
+  <!-- Shield shape -->
+  <path d="M6 3 L6 20 C6 23.5 7.5 26.5 10.5 28 L18.5 30 C19.5 30.3 20.5 30.3 21.5 30 L29.5 28 C32.5 26.5 34 23.5 34 20 L34 3 C34 1.5 32.5 0 31 0 L9 0 C7.5 0 6 1.5 6 3 Z" 
+        class="icon-shield"
+        transform="translate(8, 8)"/>
+  
+  <!-- Checkmark -->
+  <path d="M13 20 L18 25 L27 13" 
+        class="icon-check"
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"
+        transform="translate(8, 8)"/>
+</svg>

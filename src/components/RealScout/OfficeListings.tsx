@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, createElement } from 'react'
 
 type OfficeListingsProps = {
   agentEncodedId: string
@@ -39,15 +39,14 @@ export default function OfficeListings({
           }
         `
       }} />
-      {/* @ts-expect-error - RealScout web component */}
-      <realscout-office-listings
-        agent-encoded-id={agentEncodedId}
-        sort-order={sortOrder}
-        listing-status={listingStatus}
-        property-types={propertyTypes}
-        price-min={priceMin?.toString()}
-        price-max={priceMax?.toString()}
-      />
+      {createElement('realscout-office-listings', {
+        'agent-encoded-id': agentEncodedId,
+        'sort-order': sortOrder,
+        'listing-status': listingStatus,
+        'property-types': propertyTypes,
+        'price-min': priceMin?.toString(),
+        'price-max': priceMax?.toString(),
+      })}
     </div>
   )
 }

@@ -19,6 +19,30 @@ export const metadata: Metadata = {
   title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
   description:
     "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
+  openGraph: {
+    title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
+    description:
+      "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
+    url: "https://www.arieshenderson.com",
+    siteName: "Berkshire Hathaway HomeServices Nevada Properties",
+    images: [
+      {
+        url: "https://www.arieshenderson.com/images/blog/blog-01.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Exclusive Buyer Agent - Dr. Jan Duffy",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
+    description:
+      "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
+    images: ["https://www.arieshenderson.com/images/blog/blog-01.jpg"],
+  },
 };
 
 export default function Home() {

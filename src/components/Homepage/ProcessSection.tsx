@@ -5,7 +5,7 @@ const steps = [
     number: '1',
     title: 'Free Consultation',
     description:
-      'We talk about what you're looking for, your budget, and your timeline. No obligation. Just a conversation to see if we're a good fit.',
+      "We talk about what you're looking for, your budget, and your timeline. No obligation. Just a conversation to see if we're a good fit.",
   },
   {
     number: '2',
@@ -23,7 +23,7 @@ const steps = [
     number: '4',
     title: 'We Protect You Through Closing',
     description:
-      'We review every document, attend every inspection, and make sure the builder delivers what they promised. If something's wrong, we fix it before you close.',
+      "We review every document, attend every inspection, and make sure the builder delivers what they promised. If something's wrong, we fix it before you close.",
   },
   {
     number: '5',

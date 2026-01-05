@@ -40,7 +40,7 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/)
       const linkMatch = itemContent.match(/<link>(.*?)<\/link>/)
       const descMatch = itemContent.match(
-        /<description><!\[CDATA\[(.*?)\]\]><\/description>/s
+        /<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/
       )
       const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/)
       const categoryMatches = itemContent.matchAll(/<category><!\[CDATA\[(.*?)\]\]><\/category>/g)

@@ -120,7 +120,6 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       const title = titleMatch ? titleMatch[1].trim() : ''
       // Use content:encoded if available, otherwise fall back to description
       const rawContent = contentMatch ? contentMatch[1].trim() : (descMatch ? descMatch[1].trim() : '')
-      const pubDate = pubDateMatch ? pubDateMatch[1].trim() : ''
 
       // Extract image from description or content
       const imageMatch = rawContent.match(/<img[^>]+src="([^"]+)"/i)

@@ -1,0 +1,386 @@
+{
+  "summerlin": {
+    "name": "Summerlin",
+    "slug": "summerlin",
+    "fullName": "Summerlin, NV",
+    "h1": "New Construction Homes in Summerlin, NV",
+    "subhead": "Find builder communities, negotiate better prices, close with confidence",
+    "priceRange": "$500,000 - $1.5M+",
+    "medianPrice": 750000,
+    "pricePerSqft": 280,
+    "daysOnMarket": 45,
+    "activeListings": 120,
+    "yoyChange": "+5.2%",
+    "overview": "Summerlin is Las Vegas's premier master-planned community, spanning 22,500 acres on the western edge of the valley. Nestled against Red Rock Canyon National Conservation Area, Summerlin represents over 30 years of thoughtful development, creating a cohesive luxury living experience. The community consistently ranks among the nation's best places to live, known for exceptional quality of life, top-tier amenities, and stunning natural beauty. New construction buyers choose Summerlin for its established infrastructure, championship golf courses, extensive park system, and proximity to both natural recreation and urban conveniences. The area has seen steady appreciation and remains a strong investment for those seeking luxury new construction homes with long-term value.",
+    "character": "Summerlin attracts affluent professionals, retirees, and families seeking an upscale lifestyle. The community feels established yet vibrant, with mature landscaping, well-maintained infrastructure, and a strong sense of community identity. Residents enjoy an active outdoor lifestyle with 150+ parks and 150+ miles of trails, while also having access to upscale shopping at Downtown Summerlin, fine dining, and cultural amenities like the Las Vegas Ballpark.",
+    "whyNewConstruction": "Summerlin's new construction market offers buyers the opportunity to own in a proven, desirable location with modern floor plans and energy-efficient features. Builders here focus on luxury finishes, larger lots, and premium locations within the master plan. The established HOA structure and community amenities are already in place, so new homeowners immediately benefit from the full Summerlin lifestyle without waiting for development.",
+    "developmentTrends": "Recent development has focused on higher-density luxury communities, larger estate lots, and age-restricted active adult communities. Builders are emphasizing smart home technology, sustainable building practices, and flexible floor plans for remote work. The area continues to expand northward with new phases, maintaining the master-planned integrity while adding modern amenities.",
+    "communities": [
+      {
+        "name": "The Ridges",
+        "builder": "Toll Brothers",
+        "priceRange": "$800K - $2M+",
+        "sqftRange": "2,500 - 5,000",
+        "lotSizes": "7,000 - 15,000 sq ft",
+        "amenities": ["Gated", "Golf Course", "Clubhouse", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Red Rock Country Club",
+        "builder": "Pulte Homes",
+        "priceRange": "$600K - $1.2M",
+        "sqftRange": "2,200 - 4,500",
+        "lotSizes": "6,000 - 12,000 sq ft",
+        "amenities": ["Gated", "Golf Course", "Tennis", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Trail Ridge",
+        "builder": "Richmond American",
+        "priceRange": "$500K - $900K",
+        "sqftRange": "1,800 - 3,500",
+        "lotSizes": "5,000 - 8,000 sq ft",
+        "amenities": ["Parks", "Trails", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Sun City Summerlin",
+        "builder": "Del Webb",
+        "priceRange": "$400K - $800K",
+        "sqftRange": "1,500 - 3,000",
+        "lotSizes": "4,500 - 7,000 sq ft",
+        "amenities": ["55+", "Golf", "Recreation Centers", "Pools"],
+        "ageRestricted": true
+      }
+    ],
+    "schools": {
+      "elementary": [
+        { "name": "Givens Elementary", "rating": 9, "type": "Public" },
+        { "name": "Vanderburg Elementary", "rating": 8, "type": "Public" },
+        { "name": "The Meadows School", "rating": 10, "type": "Private" }
+      ],
+      "middle": [
+        { "name": "Sig Rogich Middle School", "rating": 9, "type": "Public" },
+        { "name": "The Meadows School", "rating": 10, "type": "Private" }
+      ],
+      "high": [
+        { "name": "Palo Verde High School", "rating": 8, "type": "Public" },
+        { "name": "The Meadows School", "rating": 10, "type": "Private" },
+        { "name": "Faith Lutheran High School", "rating": 9, "type": "Private" }
+      ]
+    },
+    "lifestyle": {
+      "shopping": "Downtown Summerlin offers upscale shopping with retailers like Apple, Nordstrom, and local boutiques. The community also features multiple grocery stores including Whole Foods and Trader Joe's.",
+      "dining": "From fine dining at restaurants like Echo & Rig to casual spots at Downtown Summerlin, the area offers diverse culinary options. Red Rock Resort provides additional dining and entertainment.",
+      "parks": "Summerlin features 150+ parks including the 30-acre Summerlin Centre Community Park, multiple sports complexes, and extensive trail systems connecting throughout the community.",
+      "healthcare": "Summerlin Hospital Medical Center provides comprehensive healthcare services. Multiple urgent care facilities and specialty practices serve the area.",
+      "commute": "15-20 minutes to Las Vegas Strip, 20-25 minutes to Downtown Las Vegas, 30 minutes to McCarran Airport. Easy access to Summerlin Parkway and I-215.",
+      "unique": "Proximity to Red Rock Canyon for hiking and climbing, championship golf courses, Las Vegas Ballpark for professional baseball, and the strong master-planned community governance."
+    },
+    "buyerAgentValue": "Summerlin's luxury new construction market requires specialized knowledge. Builders here use sophisticated pricing strategies and contract terms. We've negotiated $20,000-$75,000 in savings for clients through price negotiations, upgrade discounts, and fee reductions. Common issues include restrictive HOA covenants, builder warranty limitations, and lot premium pricing that can be negotiated. We also help navigate the complex master plan rules and ensure your new home meets all community standards before closing.",
+    "faqs": [
+      {
+        "question": "What is the average price of new construction in Summerlin?",
+        "answer": "The average price for new construction homes in Summerlin ranges from $500,000 to $1.5 million, with luxury estates exceeding $2 million. The median price is approximately $750,000. Prices vary significantly based on location within Summerlin, lot size, and builder."
+      },
+      {
+        "question": "Which builders are building in Summerlin?",
+        "answer": "Active builders in Summerlin include Toll Brothers, Pulte Homes, Richmond American, Del Webb, and KB Home. Each builder offers different communities with varying price points, from entry-level luxury to custom estates."
+      },
+      {
+        "question": "Are there 55+ communities in Summerlin?",
+        "answer": "Yes, Sun City Summerlin by Del Webb is a prominent 55+ active adult community. There are also other age-restricted options within Summerlin that offer resort-style amenities and maintenance-free living."
+      },
+      {
+        "question": "How do I get the best price on new construction in Summerlin?",
+        "answer": "Working with an exclusive buyer's agent is crucial. We negotiate base prices, lot premiums, and upgrade costs. Builders often have flexibility, especially on inventory homes or end-of-phase lots. We also help you avoid unnecessary fees and ensure you're getting fair market value."
+      },
+      {
+        "question": "What are the HOA fees in Summerlin new construction?",
+        "answer": "HOA fees in Summerlin typically range from $150-$400 per month, depending on the community. Master-planned communities with golf courses and extensive amenities tend to have higher fees. We review all HOA documents and fees before you commit."
+      },
+      {
+        "question": "How long does it take to build a new home in Summerlin?",
+        "answer": "Construction timelines in Summerlin typically range from 6-12 months, depending on the builder, home size, and customization level. Some builders offer quick move-in homes that can close in 30-60 days. We help you understand realistic timelines and coordinate with your current living situation."
+      },
+      {
+        "question": "Summerlin vs Henderson: which is better for new construction?",
+        "answer": "Summerlin offers established luxury with premium pricing and master-planned amenities. Henderson provides more moderate pricing and family-oriented communities. Summerlin is ideal if you value established infrastructure, golf, and proximity to Red Rock. Henderson suits buyers seeking better value and newer development. We can help you compare based on your priorities."
+      }
+    ],
+    "relatedNeighborhoods": [
+      {
+        "name": "Henderson",
+        "slug": "henderson",
+        "comparison": "More affordable with family-focused communities"
+      },
+      {
+        "name": "North Las Vegas",
+        "slug": "north-las-vegas",
+        "comparison": "Entry-level pricing with newer infrastructure"
+      }
+    ]
+  },
+  "henderson": {
+    "name": "Henderson",
+    "slug": "henderson",
+    "fullName": "Henderson, NV",
+    "h1": "New Construction Homes in Henderson, NV",
+    "subhead": "Find builder communities, negotiate better prices, close with confidence",
+    "priceRange": "$400,000 - $900,000",
+    "medianPrice": 550000,
+    "pricePerSqft": 220,
+    "daysOnMarket": 38,
+    "activeListings": 95,
+    "yoyChange": "+4.8%",
+    "overview": "Henderson is Nevada's second-largest city and consistently ranks among America's safest cities. Located 16 miles southeast of the Las Vegas Strip, Henderson offers a perfect blend of suburban tranquility and city access. The city has experienced significant growth, particularly in new construction, with master-planned communities that emphasize family-friendly amenities, excellent schools, and sustainable living. Henderson's new construction market appeals to families, professionals, and retirees seeking quality homes at more moderate price points than Summerlin while still enjoying excellent amenities and community planning. The area's strong economy, top-rated schools, and abundance of parks make it ideal for those prioritizing family lifestyle and long-term value.",
+    "character": "Henderson has a distinctly family-oriented character with a strong sense of community. The city feels more suburban and residential compared to other Las Vegas Valley areas, with well-maintained neighborhoods, active community centers, and family-friendly events. Residents appreciate the safety, excellent schools, and the balance between quiet residential living and easy access to Las Vegas amenities. The community is diverse, welcoming, and values-oriented.",
+    "whyNewConstruction": "Henderson's new construction offers modern floor plans, energy-efficient features, and smart home technology at more accessible price points. Many communities are master-planned with parks, pools, and community centers already established. Builders focus on family-friendly designs with open floor plans, multiple bedrooms, and functional spaces. The newer infrastructure means better utilities, modern road systems, and updated building codes for safety and efficiency.",
+    "developmentTrends": "Recent development emphasizes water-smart communities, sustainable building practices, and family-oriented amenities. Builders are creating communities with extensive parks, walking trails, and community centers. There's a focus on larger lots for families, multi-generational floor plans, and communities that integrate with existing Green Valley infrastructure. The area continues expanding south and east with new phases.",
+    "communities": [
+      {
+        "name": "Green Valley Ranch",
+        "builder": "Pulte Homes",
+        "priceRange": "$450K - $850K",
+        "sqftRange": "2,000 - 4,000",
+        "lotSizes": "5,500 - 10,000 sq ft",
+        "amenities": ["Gated", "Parks", "Pool", "Clubhouse"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Anthem",
+        "builder": "Richmond American",
+        "priceRange": "$500K - $900K",
+        "sqftRange": "2,200 - 4,200",
+        "lotSizes": "6,000 - 12,000 sq ft",
+        "amenities": ["Gated", "Golf", "Parks", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "MacDonald Ranch",
+        "builder": "KB Home",
+        "priceRange": "$400K - $700K",
+        "sqftRange": "1,800 - 3,200",
+        "lotSizes": "5,000 - 8,000 sq ft",
+        "amenities": ["Parks", "Trails", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Seven Hills",
+        "builder": "Toll Brothers",
+        "priceRange": "$600K - $1M",
+        "sqftRange": "2,500 - 4,500",
+        "lotSizes": "7,000 - 14,000 sq ft",
+        "amenities": ["Gated", "Golf", "Clubhouse", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Inspirada",
+        "builder": "Multiple Builders",
+        "priceRange": "$450K - $800K",
+        "sqftRange": "2,000 - 3,800",
+        "lotSizes": "5,000 - 9,000 sq ft",
+        "amenities": ["Parks", "Trails", "Community Center", "Pool"],
+        "ageRestricted": false
+      }
+    ],
+    "schools": {
+      "elementary": [
+        { "name": "Vanderburg Elementary", "rating": 9, "type": "Public" },
+        { "name": "Cram Middle School", "rating": 8, "type": "Public" },
+        { "name": "Green Valley High School", "rating": 9, "type": "Public" }
+      ],
+      "middle": [
+        { "name": "Bob Miller Middle School", "rating": 8, "type": "Public" },
+        { "name": "Green Valley High School", "rating": 9, "type": "Public" }
+      ],
+      "high": [
+        { "name": "Green Valley High School", "rating": 9, "type": "Public" },
+        { "name": "Coronado High School", "rating": 8, "type": "Public" },
+        { "name": "Foothill High School", "rating": 8, "type": "Public" }
+      ]
+    },
+    "lifestyle": {
+      "shopping": "The District at Green Valley Ranch offers shopping and dining, while Galleria at Sunset provides additional retail options. Multiple grocery stores and shopping centers serve the area.",
+      "dining": "Henderson features diverse dining from casual family restaurants to upscale options. The District and surrounding areas offer numerous choices for every taste and budget.",
+      "parks": "Henderson boasts extensive park systems including Cornerstone Park, Acacia Park, and multiple community parks with playgrounds, sports facilities, and walking trails.",
+      "healthcare": "St. Rose Dominican Hospitals serve Henderson with multiple locations. The area also has numerous medical offices, urgent care facilities, and specialty practices.",
+      "commute": "20-25 minutes to Las Vegas Strip, 25-30 minutes to Downtown Las Vegas, 25 minutes to McCarran Airport. Easy access to I-215 and US-95.",
+      "unique": "Strong focus on family amenities, excellent school district, water-smart community initiatives, and integration with established Green Valley infrastructure. The area offers a true suburban feel while maintaining Las Vegas access."
+    },
+    "buyerAgentValue": "Henderson's new construction market is competitive, and builders use various tactics to maximize profits. We regularly save clients $15,000-$50,000 through negotiations on base price, lot premiums, and upgrades. Common issues include builder add-on fees, restrictive HOA rules that aren't fully disclosed, and warranty limitations. We also help families navigate school zoning, as some new communities may have different school assignments than expected. Our knowledge of Henderson's builder landscape helps you avoid problematic communities and find the best value.",
+    "faqs": [
+      {
+        "question": "What is the average price of new construction in Henderson?",
+        "answer": "The average price for new construction homes in Henderson ranges from $400,000 to $900,000, with the median around $550,000. Prices are generally more moderate than Summerlin, making Henderson attractive to families and first-time move-up buyers."
+      },
+      {
+        "question": "Which builders are building in Henderson?",
+        "answer": "Active builders in Henderson include Pulte Homes, Richmond American, KB Home, Toll Brothers, and DR Horton. Each offers different communities focusing on family-friendly designs and value-oriented pricing."
+      },
+      {
+        "question": "Are there 55+ communities in Henderson?",
+        "answer": "Yes, Henderson has several active adult communities including Sun City MacDonald Ranch and other age-restricted options that offer maintenance-free living and resort-style amenities."
+      },
+      {
+        "question": "How do I get the best price on new construction in Henderson?",
+        "answer": "An exclusive buyer's agent negotiates on your behalf. We work to reduce base prices, negotiate lot premiums, and secure discounts on upgrades. Builders often have more flexibility than they initially show, especially on inventory homes or when closing phases."
+      },
+      {
+        "question": "What are the HOA fees in Henderson new construction?",
+        "answer": "HOA fees in Henderson typically range from $100-$300 per month, generally lower than Summerlin. Fees vary based on amenities - communities with pools, parks, and extensive common areas have higher fees."
+      },
+      {
+        "question": "How long does it take to build a new home in Henderson?",
+        "answer": "Construction timelines in Henderson typically range from 5-10 months. Some builders offer quick move-in homes available in 30-90 days. We help coordinate timelines with your current living situation and ensure realistic expectations."
+      },
+      {
+        "question": "Henderson vs Summerlin: which is better for new construction?",
+        "answer": "Henderson offers better value with more moderate pricing, excellent schools, and family-oriented communities. Summerlin provides established luxury and premium amenities at higher price points. Henderson suits families prioritizing value and schools, while Summerlin appeals to those seeking luxury and established prestige."
+      }
+    ],
+    "relatedNeighborhoods": [
+      {
+        "name": "Summerlin",
+        "slug": "summerlin",
+        "comparison": "Premium luxury with established amenities"
+      },
+      {
+        "name": "North Las Vegas",
+        "slug": "north-las-vegas",
+        "comparison": "More affordable entry-level options"
+      }
+    ]
+  },
+  "north-las-vegas": {
+    "name": "North Las Vegas",
+    "slug": "north-las-vegas",
+    "fullName": "North Las Vegas, NV",
+    "h1": "New Construction Homes in North Las Vegas, NV",
+    "subhead": "Find builder communities, negotiate better prices, close with confidence",
+    "priceRange": "$350,000 - $700,000",
+    "medianPrice": 425000,
+    "pricePerSqft": 180,
+    "daysOnMarket": 32,
+    "activeListings": 85,
+    "yoyChange": "+6.1%",
+    "overview": "North Las Vegas represents one of the Las Vegas Valley's fastest-growing areas, offering exceptional value for new construction homebuyers. The city has transformed from a primarily industrial area to a vibrant residential community with modern infrastructure, new schools, and expanding commercial development. North Las Vegas appeals to first-time buyers, growing families, and investors seeking affordable new construction with strong appreciation potential. The area offers more square footage for your money, lower property taxes, and competitive pricing on new homes. Recent development has focused on master-planned communities with contemporary designs, energy-efficient features, and family-friendly amenities. The city's strategic location provides excellent access to major employment centers including Nellis Air Force Base, Las Vegas Motor Speedway, and the growing industrial corridor.",
+    "character": "North Las Vegas has an energetic, growth-oriented character. The community feels newer and more diverse, with a mix of young families, military personnel, and professionals seeking affordable homeownership. The area maintains a strong sense of community with active neighborhood associations and local events. Residents appreciate the value, modern amenities, and the opportunity to be part of a growing area with increasing property values.",
+    "whyNewConstruction": "North Las Vegas new construction offers the best value in the Las Vegas Valley. Buyers get modern floor plans, energy-efficient features, and smart home technology at significantly lower prices than other areas. New communities feature contemporary designs, larger lots for the price, and amenities like parks, pools, and community centers. The newer infrastructure means modern utilities, updated building codes, and better planned communities with less traffic congestion than older areas.",
+    "developmentTrends": "Development is accelerating with multiple master-planned communities underway. Builders focus on value-oriented designs, larger homes for the price, and family-friendly amenities. There's emphasis on energy efficiency, smart home features, and communities that integrate parks, trails, and recreational facilities. The area continues expanding north and east with new phases and infrastructure improvements.",
+    "communities": [
+      {
+        "name": "Aliante",
+        "builder": "KB Home",
+        "priceRange": "$380K - $650K",
+        "sqftRange": "1,800 - 3,200",
+        "lotSizes": "5,000 - 8,500 sq ft",
+        "amenities": ["Gated", "Golf", "Parks", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Skye Canyon",
+        "builder": "Pulte Homes",
+        "priceRange": "$400K - $700K",
+        "sqftRange": "2,000 - 3,500",
+        "lotSizes": "5,500 - 9,000 sq ft",
+        "amenities": ["Parks", "Trails", "Community Center", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Craig Ranch",
+        "builder": "Richmond American",
+        "priceRange": "$350K - $600K",
+        "sqftRange": "1,700 - 3,000",
+        "lotSizes": "4,500 - 7,500 sq ft",
+        "amenities": ["Parks", "Pool", "Playgrounds"],
+        "ageRestricted": false
+      },
+      {
+        "name": "Eldorado",
+        "builder": "DR Horton",
+        "priceRange": "$360K - $580K",
+        "sqftRange": "1,750 - 2,900",
+        "lotSizes": "5,000 - 8,000 sq ft",
+        "amenities": ["Parks", "Pool"],
+        "ageRestricted": false
+      },
+      {
+        "name": "North Valley",
+        "builder": "Multiple Builders",
+        "priceRange": "$350K - $550K",
+        "sqftRange": "1,600 - 2,800",
+        "lotSizes": "4,000 - 7,000 sq ft",
+        "amenities": ["Parks", "Trails"],
+        "ageRestricted": false
+      }
+    ],
+    "schools": {
+      "elementary": [
+        { "name": "Cox Elementary", "rating": 7, "type": "Public" },
+        { "name": "Hayden Elementary", "rating": 8, "type": "Public" },
+        { "name": "Garehime Elementary", "rating": 7, "type": "Public" }
+      ],
+      "middle": [
+        { "name": "Cannon Middle School", "rating": 7, "type": "Public" },
+        { "name": "Mack Middle School", "rating": 7, "type": "Public" }
+      ],
+      "high": [
+        { "name": "Canyon Springs High School", "rating": 7, "type": "Public" },
+        { "name": "Cheyenne High School", "rating": 7, "type": "Public" },
+        { "name": "Palo Verde High School", "rating": 8, "type": "Public" }
+      ]
+    },
+    "lifestyle": {
+      "shopping": "Aliante Station provides shopping and dining options. The area has multiple grocery stores and shopping centers serving the growing population, with more retail development planned.",
+      "dining": "North Las Vegas offers diverse dining options from casual family restaurants to chain establishments. The area continues to attract new restaurants as the population grows.",
+      "parks": "The area features multiple community parks including Aliante Nature Discovery Park, Craig Ranch Regional Park, and numerous neighborhood parks with playgrounds and sports facilities.",
+      "healthcare": "North Vista Hospital serves the area, along with multiple urgent care facilities and medical offices. Healthcare access continues to expand with the growing population.",
+      "commute": "25-30 minutes to Las Vegas Strip, 30-35 minutes to Downtown Las Vegas, 20 minutes to Nellis Air Force Base, 35 minutes to McCarran Airport. Easy access to I-15 and US-95.",
+      "unique": "Best value in the Las Vegas Valley, newer infrastructure, growing commercial development, proximity to Nellis Air Force Base, and strong appreciation potential. The area offers a true opportunity to get in before full development."
+    },
+    "buyerAgentValue": "North Las Vegas builders often target first-time buyers who may not know they can negotiate. We regularly save clients $10,000-$40,000 through price negotiations, especially on inventory homes and end-of-phase lots. Common issues include builder add-on fees that aren't disclosed upfront, restrictive HOA rules, and warranty limitations. We also help navigate the rapidly changing school assignments as new communities are built. Our knowledge helps you avoid overpaying and ensures you understand all costs before committing.",
+    "faqs": [
+      {
+        "question": "What is the average price of new construction in North Las Vegas?",
+        "answer": "The average price for new construction homes in North Las Vegas ranges from $350,000 to $700,000, with the median around $425,000. This represents the most affordable new construction in the Las Vegas Valley, offering excellent value."
+      },
+      {
+        "question": "Which builders are building in North Las Vegas?",
+        "answer": "Active builders in North Las Vegas include KB Home, Pulte Homes, Richmond American, DR Horton, and Century Communities. These builders focus on value-oriented designs and competitive pricing."
+      },
+      {
+        "question": "Are there 55+ communities in North Las Vegas?",
+        "answer": "Yes, there are age-restricted active adult communities in North Las Vegas offering maintenance-free living and resort-style amenities at more affordable prices than other areas."
+      },
+      {
+        "question": "How do I get the best price on new construction in North Las Vegas?",
+        "answer": "Working with an exclusive buyer's agent is essential. We negotiate base prices, lot premiums, and upgrade costs. Builders often have significant flexibility, especially on inventory homes. We also help you avoid unnecessary fees and ensure transparency in all costs."
+      },
+      {
+        "question": "What are the HOA fees in North Las Vegas new construction?",
+        "answer": "HOA fees in North Las Vegas typically range from $80-$200 per month, generally the lowest in the valley. Fees vary based on amenities, with communities offering pools and parks having higher fees."
+      },
+      {
+        "question": "How long does it take to build a new home in North Las Vegas?",
+        "answer": "Construction timelines in North Las Vegas typically range from 4-9 months. Many builders offer quick move-in homes available in 30-60 days. We help coordinate timelines and ensure realistic expectations."
+      },
+      {
+        "question": "North Las Vegas vs Henderson: which is better for new construction?",
+        "answer": "North Las Vegas offers the best value with lower prices and newer infrastructure. Henderson provides more established communities and higher-rated schools at moderate prices. North Las Vegas suits first-time buyers and those prioritizing affordability, while Henderson appeals to families seeking established neighborhoods."
+      }
+    ],
+    "relatedNeighborhoods": [
+      {
+        "name": "Henderson",
+        "slug": "henderson",
+        "comparison": "More established with better schools"
+      },
+      {
+        "name": "Summerlin",
+        "slug": "summerlin",
+        "comparison": "Premium luxury at higher price points"
+      }
+    ]
+  }
+}

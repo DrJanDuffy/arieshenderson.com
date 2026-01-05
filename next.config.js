@@ -27,6 +27,16 @@ const nextConfig = {
         hostname: "**.kcmteam.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "files.keepingcurrentmatters.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "**.keepingcurrentmatters.com",
+        port: "",
+      },
     ],
   },
 };

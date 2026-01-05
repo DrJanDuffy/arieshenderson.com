@@ -39,6 +39,7 @@ export default function OfficeListings({
           }
         `
       }} />
+      {/* @ts-expect-error - RealScout web component */}
       <realscout-office-listings
         agent-encoded-id={agentEncodedId}
         sort-order={sortOrder}

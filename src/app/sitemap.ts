@@ -36,24 +36,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/neighborhoods/henderson`,
+      url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
     },
     {
-      url: `${baseUrl}/neighborhoods/summerlin`,
+      url: `${baseUrl}/terms`,
       lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neighborhoods/north-las-vegas`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
     },
   ]
 
-  return staticPages
+  // Neighborhood pages
+  const neighborhoods = ['summerlin', 'henderson', 'north-las-vegas']
+  const neighborhoodPages = neighborhoods.map((n) => ({
+    url: `${baseUrl}/neighborhoods/${n}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...neighborhoodPages]
 }

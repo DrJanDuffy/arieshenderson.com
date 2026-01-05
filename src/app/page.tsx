@@ -13,46 +13,26 @@ import PropertySearchWidget from "@/components/Homepage/PropertySearchWidget";
 import FeaturedCommunities from "@/components/Homepage/FeaturedCommunities";
 import FAQSection from "@/components/Homepage/FAQSection";
 import CTASection from "@/components/Homepage/CTASection";
-import OrganizationSchema from "@/components/SEO/OrganizationSchema";
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
+export const metadata: Metadata = genMeta({
+  title: "Exclusive Buyer Agent Las Vegas | New Construction Representation",
   description:
-    "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
-  alternates: {
-    canonical: "https://www.arieshenderson.com",
-  },
-  openGraph: {
-    title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
-    description:
-      "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
-    url: "https://www.arieshenderson.com",
-    siteName: "Berkshire Hathaway HomeServices Nevada Properties",
-    images: [
-      {
-        url: "https://www.arieshenderson.com/images/blog/blog-01.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Exclusive Buyer Agent - Dr. Jan Duffy",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "GET REAL HOMEBUYER REPRESENTATION | Exclusive Buyer Agent",
-    description:
-      "Builder's rep works for builder—who's working for YOU? Get exclusive buyer representation with an agent who puts your interests first, not the builder's bottom line.",
-    images: ["https://www.arieshenderson.com/images/blog/blog-01.jpg"],
-  },
-};
+    "Las Vegas buyer's agent working exclusively for you—not the builder. We negotiate price, review contracts, and protect your interests. Free representation.",
+  canonical: "/",
+  keywords: [
+    "exclusive buyer agent",
+    "Las Vegas real estate",
+    "new construction homes",
+    "buyer representation",
+    "Las Vegas homebuyer agent",
+  ],
+});
 
 export default function Home() {
   return (
     <>
-      <OrganizationSchema />
       <ScrollUp />
       {/* 1. Hero Section with Value Proposition */}
       <HeroSection />

@@ -1,15 +1,20 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import AdvancedSearch from "@/components/RealScout/AdvancedSearch";
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Property Search | Find Your Dream Home",
+export const metadata: Metadata = genMeta({
+  title: "Property Search",
   description:
     "Search for homes for sale in Las Vegas. Use our advanced search to filter by price, location, property type, and more. Find your perfect home today.",
-  alternates: {
-    canonical: "https://www.arieshenderson.com/search",
-  },
-};
+  canonical: "/search",
+  keywords: [
+    "Las Vegas homes for sale",
+    "property search",
+    "home search",
+    "Las Vegas real estate search",
+  ],
+});
 
 export default function SearchPage() {
   return (

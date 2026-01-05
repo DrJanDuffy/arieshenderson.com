@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /signin
+Disallow: /signup
+Disallow: /admin
+Disallow: /api/
+Disallow: /error
+
+Sitemap: https://www.arieshenderson.com/sitemap.xml

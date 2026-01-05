@@ -8,6 +8,7 @@ import SchoolsList from "@/components/Neighborhood/SchoolsList";
 import NeighborhoodFAQ from "@/components/Neighborhood/NeighborhoodFAQ";
 import LeadCaptureCTA from "@/components/Neighborhood/LeadCaptureCTA";
 import StructuredData from "@/components/SEO/StructuredData";
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import Link from "next/link";
 import { Metadata } from "next";
 import neighborhoodsData from "@/data/neighborhoods.json";
@@ -15,22 +16,18 @@ import neighborhoodsData from "@/data/neighborhoods.json";
 const neighborhood = neighborhoodsData["north-las-vegas"];
 const baseUrl = "https://www.arieshenderson.com";
 
-export const metadata: Metadata = {
-  title: "New Construction Homes in North Las Vegas NV | Exclusive Buyer Agent",
+export const metadata: Metadata = genMeta({
+  title: "New Construction Homes in North Las Vegas NV",
   description:
     "Find new construction in North Las Vegas with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $350K-$700K.",
-  alternates: {
-    canonical: `${baseUrl}/neighborhoods/north-las-vegas`,
-  },
-  openGraph: {
-    title: "New Construction Homes in North Las Vegas, NV | Exclusive Buyer Agent",
-    description:
-      "Find new construction in North Las Vegas with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests.",
-    url: `${baseUrl}/neighborhoods/north-las-vegas`,
-    siteName: "GetReal Buyer Agents",
-    type: "website",
-  },
-};
+  canonical: "/neighborhoods/north-las-vegas",
+  keywords: [
+    "North Las Vegas new construction",
+    "North Las Vegas homes for sale",
+    "new construction North Las Vegas",
+    "North Las Vegas real estate",
+  ],
+});
 
 export default function NorthLasVegasNeighborhoodPage() {
   const lastUpdated = new Date().toLocaleDateString("en-US", {

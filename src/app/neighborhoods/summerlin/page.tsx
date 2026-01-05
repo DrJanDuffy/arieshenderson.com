@@ -8,6 +8,7 @@ import SchoolsList from "@/components/Neighborhood/SchoolsList";
 import NeighborhoodFAQ from "@/components/Neighborhood/NeighborhoodFAQ";
 import LeadCaptureCTA from "@/components/Neighborhood/LeadCaptureCTA";
 import StructuredData from "@/components/SEO/StructuredData";
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import Link from "next/link";
 import { Metadata } from "next";
 import neighborhoodsData from "@/data/neighborhoods.json";
@@ -15,22 +16,18 @@ import neighborhoodsData from "@/data/neighborhoods.json";
 const neighborhood = neighborhoodsData.summerlin;
 const baseUrl = "https://www.arieshenderson.com";
 
-export const metadata: Metadata = {
-  title: "New Construction Homes in Summerlin NV | Exclusive Buyer Agent",
+export const metadata: Metadata = genMeta({
+  title: "New Construction Homes in Summerlin NV",
   description:
     "Find new construction in Summerlin with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $500K-$1.5M.",
-  alternates: {
-    canonical: `${baseUrl}/neighborhoods/summerlin`,
-  },
-  openGraph: {
-    title: "New Construction Homes in Summerlin, NV | Exclusive Buyer Agent",
-    description:
-      "Find new construction in Summerlin with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests.",
-    url: `${baseUrl}/neighborhoods/summerlin`,
-    siteName: "GetReal Buyer Agents",
-    type: "website",
-  },
-};
+  canonical: "/neighborhoods/summerlin",
+  keywords: [
+    "Summerlin new construction",
+    "Summerlin homes for sale",
+    "new construction Summerlin",
+    "Summerlin real estate",
+  ],
+});
 
 export default function SummerlinNeighborhoodPage() {
   const currentDate = new Date().toISOString().split("T")[0];

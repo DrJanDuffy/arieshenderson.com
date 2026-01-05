@@ -1,17 +1,22 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About Dr. Jan Duffy | Exclusive Buyer Agent | Las Vegas Real Estate",
+export const metadata: Metadata = genMeta({
+  title: "About Our Exclusive Buyer Agents",
   description:
-    "Learn about Dr. Jan Duffy, your trusted Las Vegas real estate expert specializing in exclusive buyer representation and new construction homes.",
-  alternates: {
-    canonical: "https://www.arieshenderson.com/about",
-  },
-};
+    "ABR and CSP certified agents representing only buyers. No dual agency, no builder conflicts. Meet the team fighting for Las Vegas homebuyers.",
+  canonical: "/about",
+  keywords: [
+    "exclusive buyer agent",
+    "Las Vegas real estate agent",
+    "ABR certified",
+    "buyer representation",
+    "Dr. Jan Duffy",
+  ],
+});
 
 const AboutPage = () => {
   return (

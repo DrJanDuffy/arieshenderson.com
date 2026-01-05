@@ -1,16 +1,20 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
-
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Contact Dr. Jan Duffy | Schedule Your Free Consultation",
+export const metadata: Metadata = genMeta({
+  title: "Free Buyer Consultation",
   description:
-    "Get in touch with Dr. Jan Duffy for your free consultation. Ask questions about new construction homes, exclusive buyer representation, or the Las Vegas real estate market.",
-  alternates: {
-    canonical: "https://www.arieshenderson.com/contact",
-  },
-};
+    "Schedule a free consultation with a Las Vegas exclusive buyer agent. No pressure, no obligation. Just honest advice about your home purchase.",
+  canonical: "/contact",
+  keywords: [
+    "free consultation",
+    "Las Vegas buyer agent",
+    "real estate consultation",
+    "homebuyer advice",
+  ],
+});
 
 const ContactPage = () => {
   return (

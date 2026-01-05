@@ -1,16 +1,21 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { fetchRSSFeed } from "@/lib/rss-feed";
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Real Estate Market Insights & News | Las Vegas Real Estate Blog",
+export const metadata: Metadata = genMeta({
+  title: "Las Vegas Real Estate Market Insights",
   description:
-    "Stay informed with the latest Las Vegas real estate market news, buying tips, market trends, and insights from Simplifying the Market to help you make informed homebuying decisions.",
-  alternates: {
-    canonical: "https://www.arieshenderson.com/blog",
-  },
-};
+    "Las Vegas housing market updates, new construction tips, and homebuyer guidance from exclusive buyer agents.",
+  canonical: "/blog",
+  keywords: [
+    "Las Vegas real estate market",
+    "housing market trends",
+    "homebuyer tips",
+    "Las Vegas market insights",
+  ],
+});
 
 const Blog = async () => {
   const rssBlogs = await fetchRSSFeed();

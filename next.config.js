@@ -39,6 +39,40 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path+/",
+        destination: "/:path+",
+        permanent: true,
+      },
+      {
+        source: "/signin",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/signup",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/error",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/blog-sidebar",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog-details",
+        destination: "/blog",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

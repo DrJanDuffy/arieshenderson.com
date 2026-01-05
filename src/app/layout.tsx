@@ -3,6 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import LocalBusinessSchema from "@/components/SEO/LocalBusinessSchema";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 
@@ -20,6 +21,9 @@ export default function RootLayout({
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Google Analytics */}
         <script
           async
@@ -55,6 +59,7 @@ export default function RootLayout({
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+        <LocalBusinessSchema />
         <Providers>
           <div className="isolate">
             <Header />

@@ -8,6 +8,7 @@ import SchoolsList from "@/components/Neighborhood/SchoolsList";
 import NeighborhoodFAQ from "@/components/Neighborhood/NeighborhoodFAQ";
 import LeadCaptureCTA from "@/components/Neighborhood/LeadCaptureCTA";
 import StructuredData from "@/components/SEO/StructuredData";
+import { generateMetadata as genMeta } from "@/components/SEO/MetaTags";
 import Link from "next/link";
 import { Metadata } from "next";
 import neighborhoodsData from "@/data/neighborhoods.json";
@@ -15,22 +16,18 @@ import neighborhoodsData from "@/data/neighborhoods.json";
 const neighborhood = neighborhoodsData.henderson;
 const baseUrl = "https://www.arieshenderson.com";
 
-export const metadata: Metadata = {
-  title: "New Construction Homes in Henderson NV | Exclusive Buyer Agent",
+export const metadata: Metadata = genMeta({
+  title: "New Construction Homes in Henderson NV",
   description:
     "Find new construction in Henderson with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests. Free representation. Price range $400K-$900K.",
-  alternates: {
-    canonical: `${baseUrl}/neighborhoods/henderson`,
-  },
-  openGraph: {
-    title: "New Construction Homes in Henderson, NV | Exclusive Buyer Agent",
-    description:
-      "Find new construction in Henderson with an exclusive buyer's agent. We negotiate price, review contracts, protect your interests.",
-    url: `${baseUrl}/neighborhoods/henderson`,
-    siteName: "GetReal Buyer Agents",
-    type: "website",
-  },
-};
+  canonical: "/neighborhoods/henderson",
+  keywords: [
+    "Henderson new construction",
+    "Henderson homes for sale",
+    "new construction Henderson",
+    "Henderson real estate",
+  ],
+});
 
 export default function HendersonNeighborhoodPage() {
   const lastUpdated = new Date().toLocaleDateString("en-US", {

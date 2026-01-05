@@ -7,6 +7,26 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "www.simplifyingthemarket.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "simplifyingthemarket.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "**.simplifyingthemarket.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "**.kcmteam.com",
+        port: "",
+      },
     ],
   },
 };

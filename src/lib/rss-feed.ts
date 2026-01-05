@@ -121,9 +121,45 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       // Use content:encoded if available, otherwise fall back to description
       const rawContent = contentMatch ? contentMatch[1].trim() : (descMatch ? descMatch[1].trim() : '')
 
-      // Extract image from description or content
-      const imageMatch = rawContent.match(/<img[^>]+src="([^"]+)"/i)
-      const image = imageMatch ? imageMatch[1] : '/images/blog/blog-01.jpg'
+      // Extract image from description or content - try multiple formats
+      // Try double quotes first
+      let imageMatch = rawContent.match(/<img[^>]+src=["']([^"']+)["']/i)
+      // If not found, try single quotes
+      if (!imageMatch) {
+        imageMatch = rawContent.match(/<img[^>]+src=([^\s>]+)/i)
+      }
+      // Also check for enclosure tag (common in RSS feeds)
+      const enclosureMatch = itemContent.match(/<enclosure[^>]+url=["']([^"']+)["'][^>]+type=["']image/i)
+      // Check for media:content or media:thumbnail
+      const mediaContentMatch = itemContent.match(/<media:content[^>]+url=["']([^"']+)["']/i) || itemContent.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i)
+      
+      let image = '/images/blog/blog-01.jpg'
+      if (enclosureMatch && enclosureMatch[1]) {
+        image = enclosureMatch[1].trim()
+      } else if (mediaContentMatch && mediaContentMatch[1]) {
+        image = mediaContentMatch[1].trim()
+      } else if (imageMatch && imageMatch[1]) {
+        image = imageMatch[1].trim()
+      }
+      
+      // Clean up image URL - remove HTML entities and ensure it's a valid URL
+      if (image && image !== '/images/blog/blog-01.jpg') {
+        image = image
+          .replace(/&amp;/g, '&')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'")
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+        // If it's a relative URL, make sure it starts with /
+        if (!image.startsWith('http') && !image.startsWith('/')) {
+          image = '/' + image
+        }
+      }
+      
+      // Debug logging for first few items
+      if (itemCount <= 3) {
+        console.log(`Item ${itemCount} - Image URL: "${image}"`)
+      }
 
       // Clean description (remove HTML tags, get first paragraph)
       // Extract first paragraph from content

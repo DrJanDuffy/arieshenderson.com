@@ -28,6 +28,7 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
         'Accept': 'application/rss+xml, application/xml, text/xml, */*',
       },
       signal: controller.signal,
+      redirect: 'follow', // Follow redirects
     }).finally(() => {
       clearTimeout(timeoutId)
     })

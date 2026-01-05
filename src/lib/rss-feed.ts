@@ -42,16 +42,21 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       const descMatch = itemContent.match(
         /<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/
       )
+      // Try to get content:encoded for better content
+      const contentMatch = itemContent.match(
+        /<content:encoded><!\[CDATA\[([\s\S]*?)\]\]><\/content:encoded>/
+      )
       const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/)
       const categoryMatches = itemContent.matchAll(/<category><!\[CDATA\[(.*?)\]\]><\/category>/g)
 
       const title = titleMatch ? titleMatch[1].trim() : ''
       const link = linkMatch ? linkMatch[1].trim() : ''
-      const description = descMatch ? descMatch[1].trim() : ''
+      // Use content:encoded if available, otherwise fall back to description
+      const rawContent = contentMatch ? contentMatch[1].trim() : (descMatch ? descMatch[1].trim() : '')
       const pubDate = pubDateMatch ? pubDateMatch[1].trim() : ''
 
-      // Extract image from description
-      const imageMatch = description.match(/<img[^>]+src="([^"]+)"/i)
+      // Extract image from description or content
+      const imageMatch = rawContent.match(/<img[^>]+src="([^"]+)"/i)
       const image = imageMatch ? imageMatch[1] : '/images/blog/blog-01.jpg'
 
       // Extract categories
@@ -61,15 +66,32 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       }
 
       // Clean description (remove HTML tags, get first paragraph)
-      const cleanDesc = description
-        .replace(/<[^>]+>/g, '')
-        .replace(/&nbsp;/g, ' ')
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .trim()
-        .substring(0, 150)
+      // Extract first paragraph from content
+      const firstParagraphMatch = rawContent.match(/<p[^>]*>([\s\S]*?)<\/p>/i)
+      let cleanDesc = ''
+      
+      if (firstParagraphMatch) {
+        cleanDesc = firstParagraphMatch[1]
+          .replace(/<[^>]+>/g, '')
+          .replace(/&nbsp;/g, ' ')
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .trim()
+          .substring(0, 150)
+      } else {
+        // Fallback to cleaning entire content
+        cleanDesc = rawContent
+          .replace(/<[^>]+>/g, '')
+          .replace(/&nbsp;/g, ' ')
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .trim()
+          .substring(0, 150)
+      }
 
       if (title && link) {
         items.push({

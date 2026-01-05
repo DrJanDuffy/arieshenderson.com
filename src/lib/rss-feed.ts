@@ -62,23 +62,49 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       itemCount++
       const itemContent = match[1]
 
-      const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/)
+      // Try CDATA format first, then fall back to plain XML
+      const titleMatchCDATA = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/)
+      const titleMatchPlain = itemContent.match(/<title>(.*?)<\/title>/)
+      const titleMatch = titleMatchCDATA || titleMatchPlain
+      
       const linkMatch = itemContent.match(/<link>(.*?)<\/link>/)
-      const descMatch = itemContent.match(
+      
+      // Try CDATA format first, then fall back to plain XML
+      const descMatchCDATA = itemContent.match(
         /<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/
       )
+      const descMatchPlain = itemContent.match(
+        /<description>([\s\S]*?)<\/description>/
+      )
+      const descMatch = descMatchCDATA || descMatchPlain
+      
       // Try to get content:encoded for better content
-      const contentMatch = itemContent.match(
+      const contentMatchCDATA = itemContent.match(
         /<content:encoded><!\[CDATA\[([\s\S]*?)\]\]><\/content:encoded>/
       )
+      const contentMatchPlain = itemContent.match(
+        /<content:encoded>([\s\S]*?)<\/content:encoded>/
+      )
+      const contentMatch = contentMatchCDATA || contentMatchPlain
+      
       const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/)
       
-      // Extract categories using a more compatible approach
+      // Extract categories - try both CDATA and plain formats
       const categories: string[] = []
-      const categoryRegex = /<category><!\[CDATA\[(.*?)\]\]><\/category>/g
+      const categoryRegexCDATA = /<category><!\[CDATA\[(.*?)\]\]><\/category>/g
+      const categoryRegexPlain = /<category>(.*?)<\/category>/g
+      
       let categoryMatch
-      while ((categoryMatch = categoryRegex.exec(itemContent)) !== null) {
+      while ((categoryMatch = categoryRegexCDATA.exec(itemContent)) !== null) {
         categories.push(categoryMatch[1].trim())
+      }
+      // Reset regex lastIndex and try plain format
+      categoryRegexPlain.lastIndex = 0
+      while ((categoryMatch = categoryRegexPlain.exec(itemContent)) !== null) {
+        const cat = categoryMatch[1].trim()
+        if (!categories.includes(cat)) {
+          categories.push(cat)
+        }
       }
 
       const title = titleMatch ? titleMatch[1].trim() : ''
@@ -119,6 +145,11 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
           .substring(0, 150)
       }
 
+      // Debug logging for first few items
+      if (itemCount <= 3) {
+        console.log(`Item ${itemCount} - Title: "${title}", Link: "${link}", Has title: ${!!title}, Has link: ${!!link}`)
+      }
+      
       if (title && link) {
         items.push({
           id: index + 1,
@@ -147,6 +178,8 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
           link,
         })
         index++
+      } else if (itemCount <= 3) {
+        console.log(`Item ${itemCount} skipped - missing title or link`)
       }
     }
 

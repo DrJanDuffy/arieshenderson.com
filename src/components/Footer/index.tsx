@@ -26,9 +26,11 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
+                <p className="mb-4 text-lg font-semibold text-black dark:text-white">
+                  Berkshire Hathaway HomeServices Nevada Properties
+                </p>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  Your Trusted Las Vegas Real Estate Experts
                 </p>
                 <div className="flex items-center">
                   <a
@@ -143,7 +145,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Terms
@@ -177,37 +179,112 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            <div className="w-full px-4 md:w-1/2 lg:w-5/12 xl:w-4/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                  Our Offices
                 </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <h3 className="mb-2 text-base font-semibold text-black dark:text-white">
+                      Centennial Hills
+                    </h3>
+                    <p className="mb-2 text-sm text-body-color dark:text-body-color-dark">
+                      9406 Del Webb Boulevard,
+                      <br />
+                      Las Vegas, NV 89134
+                    </p>
+                    <a
+                      href="tel:7027180043"
+                      className="mb-2 block text-sm text-primary hover:underline"
                     >
-                      Open Support Ticket
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      (702) 718-0043
+                    </a>
+                    <a
+                      href="https://maps.google.com/?q=9406+Del+Webb+Boulevard+Las+Vegas+NV+89134"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-primary hover:underline"
                     >
-                      Terms of Use
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      Get Directions →
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="mb-2 text-base font-semibold text-black dark:text-white">
+                      Henderson
+                    </h3>
+                    <p className="mb-2 text-sm text-body-color dark:text-body-color-dark">
+                      3185 St Rose Pkwy, Suite 101,
+                      <br />
+                      Henderson, NV 89052
+                    </p>
+                    <a
+                      href="tel:7025001955"
+                      className="mb-2 block text-sm text-primary hover:underline"
                     >
-                      About
-                    </Link>
-                  </li>
-                </ul>
+                      (702) 500-1955
+                    </a>
+                    <a
+                      href="https://maps.google.com/?q=3185+St+Rose+Pkwy+Suite+101+Henderson+NV+89052"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-primary hover:underline"
+                    >
+                      Get Directions →
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="mb-2 text-base font-semibold text-black dark:text-white">
+                      Sunset
+                    </h3>
+                    <p className="mb-2 text-sm text-body-color dark:text-body-color-dark">
+                      8850 W Sunset Rd UNIT 200,
+                      <br />
+                      Las Vegas, NV 89148
+                    </p>
+                    <a
+                      href="tel:7025001942"
+                      className="mb-2 block text-sm text-primary hover:underline"
+                    >
+                      (702) 500-1942
+                    </a>
+                    <a
+                      href="https://maps.google.com/?q=8850+W+Sunset+Rd+UNIT+200+Las+Vegas+NV+89148"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-primary hover:underline"
+                    >
+                      Get Directions →
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="mb-2 text-base font-semibold text-black dark:text-white">
+                      Summerlin
+                    </h3>
+                    <p className="mb-2 text-sm text-body-color dark:text-body-color-dark">
+                      1490 Center Crossing Rd,
+                      <br />
+                      Las Vegas, NV 89144
+                    </p>
+                    <a
+                      href="tel:7029031952"
+                      className="mb-2 block text-sm text-primary hover:underline"
+                    >
+                      (702) 903-1952
+                    </a>
+                    <a
+                      href="https://maps.google.com/?q=1490+Center+Crossing+Rd+Las+Vegas+NV+89144"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-primary hover:underline"
+                    >
+                      Get Directions →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

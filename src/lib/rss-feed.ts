@@ -46,15 +46,17 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       throw new Error('RSS feed returned empty content')
     }
     
-    // Check if it looks like XML/RSS
-    if (!xmlText.includes('<rss') && !xmlText.includes('<feed')) {
-      console.error('RSS feed does not appear to be valid XML')
-      throw new Error('RSS feed does not appear to be valid XML')
+    // Check if it looks like XML/RSS/Atom
+    if (!xmlText.includes('<rss') && !xmlText.includes('<feed') && !xmlText.includes('<item') && !xmlText.includes('<entry')) {
+      console.error('RSS feed does not appear to be valid XML/RSS/Atom')
+      console.error('First 500 chars:', xmlText.substring(0, 500))
+      throw new Error('RSS feed does not appear to be valid XML/RSS/Atom')
     }
 
-    // Parse RSS XML
+    // Parse RSS XML (try both <item> for RSS and <entry> for Atom)
     const items: any[] = []
-    const itemRegex = /<item>([\s\S]*?)<\/item>/g
+    // Try RSS format first (<item>), then Atom format (<entry>)
+    const itemRegex = /<(?:item|entry)>([\s\S]*?)<\/(?:item|entry)>/g
     let match
     let index = 0
     let itemCount = 0
@@ -68,7 +70,10 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       const titleMatchPlain = itemContent.match(/<title>(.*?)<\/title>/)
       const titleMatch = titleMatchCDATA || titleMatchPlain
       
+      // Try different link formats (RSS uses <link>, Atom uses <link href="..."/>)
       const linkMatch = itemContent.match(/<link>(.*?)<\/link>/)
+      const linkAtomMatch = itemContent.match(/<link[^>]+href=["']([^"']+)["'][^>]*\/?>/)
+      const link = linkMatch ? linkMatch[1].trim() : (linkAtomMatch ? linkAtomMatch[1].trim() : '')
       
       // Try CDATA format first, then fall back to plain XML
       const descMatchCDATA = itemContent.match(
@@ -88,7 +93,11 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       )
       const contentMatch = contentMatchCDATA || contentMatchPlain
       
+      // Try different date formats (RSS uses <pubDate>, Atom uses <published> or <updated>)
       const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/)
+      const publishedMatch = itemContent.match(/<published>(.*?)<\/published>/)
+      const updatedMatch = itemContent.match(/<updated>(.*?)<\/updated>/)
+      const pubDate = pubDateMatch ? pubDateMatch[1].trim() : (publishedMatch ? publishedMatch[1].trim() : (updatedMatch ? updatedMatch[1].trim() : ''))
       
       // Extract categories - try both CDATA and plain formats
       const categories: string[] = []
@@ -109,7 +118,6 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       }
 
       const title = titleMatch ? titleMatch[1].trim() : ''
-      const link = linkMatch ? linkMatch[1].trim() : ''
       // Use content:encoded if available, otherwise fall back to description
       const rawContent = contentMatch ? contentMatch[1].trim() : (descMatch ? descMatch[1].trim() : '')
       const pubDate = pubDateMatch ? pubDateMatch[1].trim() : ''
@@ -166,7 +174,12 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
           publishDate: pubDate
             ? (() => {
                 try {
-                  return new Date(pubDate).toLocaleDateString('en-US', {
+                  // Handle ISO 8601 dates from Atom feeds
+                  const date = new Date(pubDate)
+                  if (isNaN(date.getTime())) {
+                    return pubDate
+                  }
+                  return date.toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',

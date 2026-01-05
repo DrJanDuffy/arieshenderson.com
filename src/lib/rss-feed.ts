@@ -47,7 +47,14 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
         /<content:encoded><!\[CDATA\[([\s\S]*?)\]\]><\/content:encoded>/
       )
       const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/)
-      const categoryMatches = itemContent.matchAll(/<category><!\[CDATA\[(.*?)\]\]><\/category>/g)
+      
+      // Extract categories using a more compatible approach
+      const categories: string[] = []
+      const categoryRegex = /<category><!\[CDATA\[(.*?)\]\]><\/category>/g
+      let categoryMatch
+      while ((categoryMatch = categoryRegex.exec(itemContent)) !== null) {
+        categories.push(categoryMatch[1].trim())
+      }
 
       const title = titleMatch ? titleMatch[1].trim() : ''
       const link = linkMatch ? linkMatch[1].trim() : ''
@@ -58,12 +65,6 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
       // Extract image from description or content
       const imageMatch = rawContent.match(/<img[^>]+src="([^"]+)"/i)
       const image = imageMatch ? imageMatch[1] : '/images/blog/blog-01.jpg'
-
-      // Extract categories
-      const categories: string[] = []
-      for (const catMatch of categoryMatches) {
-        categories.push(catMatch[1].trim())
-      }
 
       // Clean description (remove HTML tags, get first paragraph)
       // Extract first paragraph from content
@@ -106,11 +107,17 @@ export async function fetchRSSFeed(): Promise<RSSBlogItem[]> {
           },
           tags: categories.length > 0 ? categories : ['Market News'],
           publishDate: pubDate
-            ? new Date(pubDate).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })
+            ? (() => {
+                try {
+                  return new Date(pubDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })
+                } catch {
+                  return pubDate
+                }
+              })()
             : 'Recent',
           link,
         })

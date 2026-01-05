@@ -38,7 +38,14 @@ export async function GET() {
         /<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/
       )
       const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/)
-      const categoryMatches = itemContent.matchAll(/<category><!\[CDATA\[(.*?)\]\]><\/category>/g)
+      
+      // Extract categories using a more compatible approach
+      const categories: string[] = []
+      const categoryRegex = /<category><!\[CDATA\[(.*?)\]\]><\/category>/g
+      let categoryMatch
+      while ((categoryMatch = categoryRegex.exec(itemContent)) !== null) {
+        categories.push(categoryMatch[1].trim())
+      }
 
       const title = titleMatch ? titleMatch[1].trim() : ''
       const link = linkMatch ? linkMatch[1].trim() : ''
@@ -48,12 +55,6 @@ export async function GET() {
       // Extract image from description
       const imageMatch = description.match(/<img[^>]+src="([^"]+)"/i)
       const image = imageMatch ? imageMatch[1] : ''
-
-      // Extract categories
-      const categories: string[] = []
-      for (const catMatch of categoryMatches) {
-        categories.push(catMatch[1].trim())
-      }
 
       // Clean description (remove HTML tags, get first paragraph)
       const cleanDesc = description
